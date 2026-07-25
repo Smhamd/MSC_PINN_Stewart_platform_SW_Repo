@@ -1,0 +1,14 @@
+rtGetInf.o: \
+ C:\Users\SAMERF~1\DOWNLO~1\SAMER\samerHARDWAREPOTread_ert_rtw\rtGetInf.c \
+ C:\Users\SAMERF~1\DOWNLO~1\SAMER\samerHARDWAREPOTread_ert_rtw\rtwtypes.h \
+ C:/PROGRA~1/MATLAB/R2025b/extern/include/tmwtypes.h \
+ C:\Users\SAMERF~1\DOWNLO~1\SAMER\samerHARDWAREPOTread_ert_rtw\rtGetInf.h \
+ C:\Users\SAMERF~1\DOWNLO~1\SAMER\samerHARDWAREPOTread_ert_rtw\rt_nonfinite.h
+
+C:\Users\SAMERF~1\DOWNLO~1\SAMER\samerHARDWAREPOTread_ert_rtw\rtwtypes.h:
+
+C:/PROGRA~1/MATLAB/R2025b/extern/include/tmwtypes.h:
+
+C:\Users\SAMERF~1\DOWNLO~1\SAMER\samerHARDWAREPOTread_ert_rtw\rtGetInf.h:
+
+C:\Users\SAMERF~1\DOWNLO~1\SAMER\samerHARDWAREPOTread_ert_rtw\rt_nonfinite.h:

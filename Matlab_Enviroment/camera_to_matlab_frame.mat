@@ -1,0 +1,5 @@
+load("camera_to_matlab_frame.mat");
+
+P_camera = [X_cam_mm; Y_cam_mm; Z_cam_mm];
+
+P_matlab = R_cam_to_matlab * P_camera + t_cam_to_matlab;

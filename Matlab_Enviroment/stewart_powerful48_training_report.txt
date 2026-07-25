@@ -1,0 +1,59 @@
+Powerful 48-input PC residual PINN
+
+Input order:
+   1: X_desired
+   2: Y_desired
+   3: Z_desired
+   4: Roll_desired
+   5: Pitch_desired
+   6: Yaw_desired
+   7: L1_desired
+   8: L2_desired
+   9: L3_desired
+  10: L4_desired
+  11: L5_desired
+  12: L6_desired
+  13: L1_actual_prev
+  14: L2_actual_prev
+  15: L3_actual_prev
+  16: L4_actual_prev
+  17: L5_actual_prev
+  18: L6_actual_prev
+  19: vL1_desired_mm_s
+  20: vL2_desired_mm_s
+  21: vL3_desired_mm_s
+  22: vL4_desired_mm_s
+  23: vL5_desired_mm_s
+  24: vL6_desired_mm_s
+  25: dirL1_desired
+  26: dirL2_desired
+  27: dirL3_desired
+  28: dirL4_desired
+  29: dirL5_desired
+  30: dirL6_desired
+  31: vL1_actual_prev_mm_s
+  32: vL2_actual_prev_mm_s
+  33: vL3_actual_prev_mm_s
+  34: vL4_actual_prev_mm_s
+  35: vL5_actual_prev_mm_s
+  36: vL6_actual_prev_mm_s
+  37: dirL1_actual_prev
+  38: dirL2_actual_prev
+  39: dirL3_actual_prev
+  40: dirL4_actual_prev
+  41: dirL5_actual_prev
+  42: dirL6_actual_prev
+  43: errorL1_prev_mm
+  44: errorL2_prev_mm
+  45: errorL3_prev_mm
+  46: errorL4_prev_mm
+  47: errorL5_prev_mm
+  48: errorL6_prev_mm
+
+Target: L_desired(k) - L_actual(k)
+Mean RMSE [mm]: 0.113108
+Mean MAE  [mm]: 0.078690
+RMSE per leg [mm]: [0.135556 0.138046 0.104802 0.110056 0.0928482 0.0973389]
+MAE per leg [mm]:  [0.0968914 0.100093 0.0711618 0.0810527 0.0583414 0.0645973]
+Max error per leg [mm]: [1.48769 1.46584 1.69012 1.392 1.4837 1.23161]
+Model: stewart_powerful48_pc_model.mat
