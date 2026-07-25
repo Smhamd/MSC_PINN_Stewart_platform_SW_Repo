@@ -1,0 +1,60 @@
+train_stewart_powerful48_pc.m script used to train the PINN model 
+
+Example to use : 
+    results = train_stewart_powerful48_pc([
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj1_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj2_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj3_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj4_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj5_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj6_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj7_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj8_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj9_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj10_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj11_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj12_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj13_fulldata.csv"
+    "C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\PINN_Block_Disabled\Without_Backlash\Traj14_fulldata.csv"
+]);
+
+arduino_open_serial.m
+arduino_write_step.m
+arduino_read_step.m
+arduino_force_close.m
+scripts to activate serial connection between PC and Arduino and send signals 
+
+
+
+#####Save data from matlab workspace
+
+A = out.T1_DP6_IL6_AL6_ER6;
+names = {
+    'time'
+    'X_desired'
+    'Y_desired'
+    'Z_desired'
+    'Roll_desired'
+    'Pitch_desired'
+    'Yaw_desired'
+    'L1_desired'
+    'L2_desired'
+    'L3_desired'
+    'L4_desired'
+    'L5_desired'
+    'L6_desired'
+    'L1_actual(k-1)'
+    'L2_actual(k-1)'
+    'L3_actual(k-1)'
+    'L4_actual(k-1)'
+    'L5_actual(k-1)'
+    'L6_actual(k-1)'
+    'L1_error'
+    'L2_error'
+    'L3_error'
+    'L4_error'
+    'L5_error'
+    'L6_error'
+};
+T = array2table(A, 'VariableNames', names);
+writetable(T, 'C:\Users\Samer FARAJ\Downloads\Scripts\Thesis\Training_Data\Traj8.csv');
